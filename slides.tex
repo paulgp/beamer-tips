@@ -253,15 +253,14 @@ Author C && Author D   \\
 \begin{frame}[fragile]{Roadmap at every section?}
   \begin{wideitemize}
     \item If you prefer to have a roadmap, use the following code:
-\begin{verbatim}
-\AtBeginSection[]
-{
-   \begin{frame}
-       \frametitle{Roadmap of Talk}
-       \tableofcontents[currentsection]
-   \end{frame}
+   \begin{verbatim}[fragile]
+ \AtBeginSection[]{%
+\begin{frame}%
+ \frametitle{Roadmap of Talk}%
+ \tableofcontents[currentsection] %
+\end{frame}%
 }
-\end{verbatim}
+% \end{verbatim}
     \item This creates a section list at each section marker
     \item I included it in the header -- just uncomment it
   \end{wideitemize}
@@ -332,11 +331,8 @@ Make your own color wheel palette!  \url{https://www.sessions.edu/color-calculat
 \setbeamercolor{background canvas}{bg=MyBackground}
 
 %% Change the bg color to adjust your transition slide background color!
-\newenvironment{transitionframe}{
-  \setbeamercolor{background canvas}{bg=yellow}
-  \begin{frame}}{
-    \end{frame}
-}
+\newenvironment{transitionframe}{\setbeamercolor{background canvas}{bg=yellow}\begin{frame}}{\end{frame}}
+
 
 \setbeamercolor{frametitle}{fg=blue}
 \setbeamercolor{title}{fg=black}
