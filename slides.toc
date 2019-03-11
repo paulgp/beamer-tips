@@ -1,0 +1,8 @@
+\beamer@sectionintoc {1}{Structure and Spacing}{4}{0}{1}
+\beamer@sectionintoc {2}{Color}{9}{0}{2}
+\beamer@sectionintoc {3}{Fonts, Text Size and Readibility}{15}{0}{3}
+\beamer@sectionintoc {4}{Graphics}{21}{0}{4}
+\beamer@sectionintoc {5}{Tables}{27}{0}{5}
+\beamer@sectionintoc {6}{Dummy Frames}{38}{0}{6}
+\beamer@sectionintoc {7}{Misc and options to change}{44}{0}{7}
+\beamer@sectionintoc {8}{Appendix}{49}{0}{8}

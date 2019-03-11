@@ -1,0 +1,12 @@
+\frametitle{Fitting tables doesn't have to be painful}
+\begin{wideitemize}
+    \item Simple commands to fit table and center:
+    \begin{verbatim}
+\makebox[\linewidth][c]{
+\begin{tabular}{l cc ddd}
+  results...
+\end{tabular}
+    \end{verbatim}
+    \item Don't use the \texttt{table} environment
+    \item If you don't want to center, use change \texttt{[c]} to \texttt{[l]}
+  \end{wideitemize}
