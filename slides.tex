@@ -116,6 +116,32 @@
 
 \newenvironment{wideitemize}{\itemize\addtolength{\itemsep}{10pt}}{\enditemize}
 
+\usepackage{environ}
+\NewEnviron{videoframe}[1]{
+  \begin{frame}
+    \vspace{-8pt}
+    \begin{columns}[onlytextwidth, T] % align columns
+      \begin{column}{.58\textwidth}
+        \begin{minipage}[t][\textheight][t]
+          {\dimexpr\textwidth}
+          \vspace{8pt}
+          \hspace{4pt} {\Large \sc \textcolor{blue}{#1}}
+          \vspace{8pt}
+          
+          \BODY
+        \end{minipage}
+      \end{column}%
+      \hfill%
+      \begin{column}{.42\textwidth}
+        \colorbox{green!20}{\begin{minipage}[t][1.2\textheight][t]
+            {\dimexpr\textwidth}
+            Face goes here
+          \end{minipage}}
+      \end{column}%
+    \end{columns}
+  \end{frame}
+}
+
 \title[]{\textcolor{blue}{Tips + Tricks with Beamer for Economists}}
 \author[PGP]{}
 \institute[FRBNY]{\small{\begin{tabular}{c c c}
@@ -627,6 +653,32 @@ Column 2
 \end{columns}
 \end{frame}
 
+\begin{frame}
+  \vspace{-8pt}
+\begin{columns}[T] % align columns
+\begin{column}{.58\textwidth}
+\begin{minipage}[t][\textheight][t]
+  {\dimexpr\textwidth}
+  \vspace{8pt}
+  \hspace{4pt} \textcolor{blue}{Two Column w/ Face}
+  \vspace{8pt}
+  
+Information goes here
+    \end{minipage}
+\end{column}%
+\hfill%
+\begin{column}{.42\textwidth}
+ \colorbox{green!20}{\begin{minipage}[t][1.2\textheight][t]
+      {\dimexpr\textwidth}
+      Face goes here
+    \end{minipage}}
+\end{column}%
+\end{columns}
+\end{frame}
+
+\begin{videoframe}{This Looks Good}
+  Using the Environ package
+\end{videoframe}
 
 \begin{frame}{Table Frame}
 \setbeamercovered{invisible}
